@@ -1,4 +1,4 @@
-# Crypto-Tax-Stack
+# Ethereum-Tax-Stack
 
 MERN Stack that parses through Ethereum transactions and pulls monetary statistics for tax related purposes.
 
