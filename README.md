@@ -4,11 +4,11 @@ MERN Stack that parses through Ethereum transactions and pulls monetary statisti
 
 ## Todo
 
-1. Set up stack on computer
-    * Get local MongoDB communication to express and node
+1. Set up stack on computer (Finished)
+    * Get local MongoDB communication to express and node (Finished)
 
-2. Set up APIs
-    * Get etherscan.io API access and determine how to pull data
+2. Set up APIs (In Progress)
+    * Get etherscan.io API access and determine how to pull data (In Progress)
     * Find method to store etherscan data in mongo
    
 3. Set up functions for front end
