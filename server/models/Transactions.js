@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 
 const TransactionSchema = new mongoose.Schema({
-    userHash: {
+    type: {
         type: String,
         required: true,
     },
-    transactionHash: {
+    data: {
+        // Todo: Go through response of Etherscan API to categorize the schema properly
         type: String,
         required: true,
     },
