@@ -7,12 +7,13 @@ const app = express();
 app.use(cors());
 app.use(express.json()); 
 
-// Initializing Database, Schema,and Hidden Keys
-const settings = require('./settings.json');
+// Initializing Database, Schema,and Environment Variables
+const settings = require('./config/key.json');
 const TransactionModel = require('./models/Transactions');
 const UsersModel = require('./models/Users');
 const UserTransModel = require('./models/UserTrans');
-mongoose.connect(`mongodb+srv://${settings.Username}:${settings.Password}@ethereumtaxstack.bngau.mongodb.net/EthereumTaxStack?retryWrites=true&w=majority`);
+const connectDB = require('./config/db');
+connectDB();
 
 // Backend APIs and Functions
 
@@ -26,11 +27,16 @@ mongoose.connect(`mongodb+srv://${settings.Username}:${settings.Password}@ethere
 
 
 app.post('/addUser', async (req, res) => {
+
+    // Adds user to Mongo
     const user = req.body;
     const newUser = new UsersModel(user);
     await newUser.save();
-
     res.json(user); 
+
+    // Todo: Handles all Etherscan API calls here here
+    console.log("Fetching user's data on Etherscan");
+
 });
 
 
