@@ -25,6 +25,10 @@ connectDB();
  * Generate Tax Forms (More research needed for this)
  */
 
+// use Routes
+const userTrans = require('./routes/api/userTrans');
+app.use('/userTrans', userTrans);
+
 
 app.post('/addUser', async (req, res) => {
 
