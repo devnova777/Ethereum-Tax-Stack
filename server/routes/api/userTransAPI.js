@@ -6,16 +6,17 @@ const router = express.Router();
 // Load UserTrans model
 const UserTransModel = require('../../models/UserTrans');
 
+
 /**
  * @route GET userTrans/test
- * @description tests userTrans route
+ * @description Tests userTrans route
  * @access Public
  */
-router.get('/test', (req, res) => res.send('book route testing'));
+router.get('/test', (req, res) => res.send('userTrans route testing'));
 
 /**
  * @route GET userTrans
- * @description Get all userTrans
+ * @description Get all userTrans objects
  * @access Public
  */
 router.get('/', (req, res) => {
@@ -26,7 +27,7 @@ router.get('/', (req, res) => {
 
 /**
  * @route GET userTrans/:user
- * @description Get list of transactions by user
+ * @description Get list of userTrans objects by user
  * @access Public
  */
 router.get('/:id', (req, res) => {
@@ -42,7 +43,7 @@ router.get('/:id', (req, res) => {
 
 /**
  * @route POST userTrans/:transaction
- * @description add userTrans object 
+ * @description Add userTrans object 
  * @access Public
  */
 router.post('/', (req, res) => {
