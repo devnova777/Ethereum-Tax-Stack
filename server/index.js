@@ -1,21 +1,37 @@
-// Initializing required files and dependencies
+/**
+ * Initializing required files and dependencies
+ */
 const express = require('express');
 const mongoose = require('mongoose');
 const fetch = require('node-fetch');
 const cors = require('cors');
 const app = express();
 app.use(cors());
-app.use(express.json()); 
+app.use(express.json());
+const settings = require('./config/key.json'); 
 
-// Initializing Database, Schema,and Environment Variables
-const settings = require('./config/key.json');
-const TransactionModel = require('./models/Transactions');
-const UsersModel = require('./models/Users');
-const UserTransModel = require('./models/UserTrans');
+/**
+ * Connecting to Mongo Database
+ */
 const connectDB = require('./config/db');
 connectDB();
 
-// Backend APIs and Functions
+/**
+ * Loading Backend Route APIs
+ */
+const userTrans = require('./routes/api/userTransAPI');
+const users = require('./routes/api/usersAPI');
+const transactions = require('./routes/api/transactionsAPI');
+app.use('/userTrans', userTrans);
+app.use('/users', users);
+app.use('/transactions', transactions);
+
+/**
+ * Miscellaneous
+ */
+app.listen(3001, () => {
+    console.log('Server is online...');
+});
 
 /**
  * Essential Functions and APIs Needed:
@@ -24,10 +40,6 @@ connectDB();
  * Display Data (GET Request fom Mongo)
  * Generate Tax Forms (More research needed for this)
  */
-
-// use Routes
-const userTrans = require('./routes/api/userTrans');
-app.use('/userTrans', userTrans);
 
 
 app.post('/addUser', async (req, res) => {
@@ -61,8 +73,4 @@ app.get('/getEtherBalance/:address', async (req, res) => {
     const fetch_response = await fetch(api_url);
     const json = await fetch_response.json();
     res.json(json);
-});
-
-app.listen(3001, () => {
-    console.log('server runs');
 });
