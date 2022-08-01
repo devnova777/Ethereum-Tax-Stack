@@ -1,2 +1,2 @@
-# ignore settings.json
-server/settings.json
+# ignore files with environment keys
+config/key.json
