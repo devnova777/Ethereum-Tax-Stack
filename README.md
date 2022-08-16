@@ -1,6 +1,6 @@
 # Ethereum-Tax-Stack
 
-MERN Stack that parses through Ethereum transactions and pulls monetary statistics for tax related purposes.
+MERN Stack that parses through Ethereum transactions and pulls monetary statistics for tax related purposes. This is a project done by @thaddyD and @StevenGong333.
 
 ## Todo
 
