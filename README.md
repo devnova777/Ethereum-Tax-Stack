@@ -7,12 +7,12 @@ MERN Stack that parses through Ethereum transactions and pulls monetary statisti
 1. Set up stack on computer **(Finished)**
     * Get local MongoDB communication to express and node **(Finished)**
 
-2. Set up APIs **(In Progress)**
-    * Get etherscan.io API access and determine how to pull data **(In Progress)**
-    * Find method to store etherscan data in mongo
+2. Set up APIs **(Finished)**
+    * Get etherscan.io API access and determine how to pull data **(Finished)**
+    * Find method to store etherscan data in mongo **(Finished)**
    
-3. Set up functions for front end
-    * Data fetching functions
+3. Set up functions for front end **(In Progress)**
+    * Data fetching functions **(In Progress)**
     * Math calculations for determining specific monetary values
 
 4. Design frontend UI
