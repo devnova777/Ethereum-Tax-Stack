@@ -1,10 +1,9 @@
 # Ethereum-Tax-Stack
 
-MERN Stack that parses through Ethereum transactions and pulls monetary statistics for tax related purposes. This is a project done by @thaddyD and @StevenGong333.
+MERN(Mongo, Express, React, Node) Stack that parses through Ethereum transactions and pulls monetary statistics for tax related purposes. This is a project done by @thaddyD and @StevenGong333.
 
 ## Todo
-
-1. Set up stack on computer **(Finished)**
+1S. et up stack on computer **(Finished)**
     * Get local MongoDB communication to express and node **(Finished)**
 
 2. Set up APIs **(Finished)**
